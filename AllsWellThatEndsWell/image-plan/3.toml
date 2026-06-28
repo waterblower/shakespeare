@@ -1,0 +1,240 @@
+# image2 execution rule: This plan is for image2 image generation. For every generation, pass only the prompt, reference images, aspect ratio, and parameters from the current individual [[tasks]] block. Do not use neighboring tasks, context, existing images, or character impressions to modify, complete, cross-reference, or reuse faces from other tasks.
+# Source: ../shot-groups/
+# Project: All's Well That Ends Well
+
+# Act 3 image generation plan. Within this act, execute in this order: environments first, tools/props/clothes second, characters third, concept stills last.
+
+[[tasks]]
+id = "ENV-03"
+target_image_path = "../assets/environments/ENV-03_Florence.png" # todo
+reference_image_paths = []
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Florence environment reference for Shakespeare's All's Well That Ends Well: a cinematic European Renaissance historical stage space with readable architecture, entrances, character staging zones, walls, colonnade or structural rhythm, window light, furniture, and walking paths. The frame is an empty location or contains only distant background figures.
+[Requirements] 16:9 horizontal environment asset. Keep the period consistent with French and Florentine Renaissance court and town settings. The space must be usable for later character concept stills, with a wide composition and clear movement paths."""
+
+[[tasks]]
+id = "ENV-04"
+target_image_path = "../assets/environments/ENV-04_Camp_before_Florence.png" # todo
+reference_image_paths = []
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Camp before Florence environment reference for Shakespeare's All's Well That Ends Well: a cinematic European Renaissance historical stage space with readable architecture, entrances, character staging zones, walls, colonnade or structural rhythm, window light, furniture, and walking paths. The frame is an empty location or contains only distant background figures.
+[Requirements] 16:9 horizontal environment asset. Keep the period consistent with French and Florentine Renaissance court and town settings. The space must be usable for later character concept stills, with a wide composition and clear movement paths."""
+
+[[tasks]]
+id = "PROP-LETTERS"
+target_image_path = "../assets/props/letters_petitions.png" # todo
+reference_image_paths = []
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] A set of sealed Renaissance letters and petitions on parchment, wax seals, folded papers, quill and small inkwell, used for court messages and accusations in the story.
+[Requirements] Single tool or prop reference image with the object centered. Material, scale, structure, and period craftsmanship must be clearly readable for use as a later story concept-still reference asset."""
+
+[[tasks]]
+id = "PROP-DRUM"
+target_image_path = "../assets/props/florentine_war_drum.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:2"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:2
+[Subject] A battered Florentine military drum on earth near a camp path, leather heads, cords, wood shell, dust and campaign wear clearly readable.
+[Requirements] Single tool or prop reference image with the object centered. Material, scale, structure, and period craftsmanship must be clearly readable for use as a later story concept-still reference asset."""
+
+[[tasks]]
+id = "COSTUME-DUKE"
+target_image_path = "../assets/costumes/DUKE_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for DUKE: Florentine duke wardrobe: dark rich Italian Renaissance robe, administrative chain or insignia, structured shoulders, formal hat option, sober ruling-class palette. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "COSTUME-Widow"
+target_image_path = "../assets/costumes/Widow_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for Widow: Florentine widow citizen wardrobe: dark practical dress, apron or outer wrap, head covering, worn but clean fabric, middle-class city texture. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "COSTUME-DIANA"
+target_image_path = "../assets/costumes/DIANA_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for DIANA: young Florentine citizen woman wardrobe: modest dress, simple bodice, clean sleeves, light head covering option, restrained youthful palette. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "COSTUME-MARIANA"
+target_image_path = "../assets/costumes/MARIANA_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for MARIANA: Florentine young woman citizen wardrobe: practical modest dress, shawl or head cloth, muted fabric, everyday city clothing. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "CH-DUKE-FACE"
+target_image_path = "../assets/characters/DUKE/DUKE_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] DUKE source face close-up, visually in his fifties; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; Duke of Florence; authoritative and practical, Italian ruler bearing, dark rich robe with military-political insignia. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-DUKE-STAND"
+target_image_path = "../assets/characters/DUKE/DUKE_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/DUKE/DUKE_face_3x4.png", "../assets/costumes/DUKE_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] DUKE front-and-back full-body character turnaround, visually in his fifties; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; Duke of Florence; authoritative and practical, Italian ruler bearing, dark rich robe with military-political insignia. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "CH-Widow-FACE"
+target_image_path = "../assets/characters/Widow/Widow_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Widow source face close-up, visually around fifty; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; Florentine widow; shrewd and steady, worldly, dark citizen clothing and head covering. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-Widow-STAND"
+target_image_path = "../assets/characters/Widow/Widow_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/Widow/Widow_face_3x4.png", "../assets/costumes/Widow_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] Widow front-and-back full-body character turnaround, visually around fifty; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; Florentine widow; shrewd and steady, worldly, dark citizen clothing and head covering. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "CH-DIANA-FACE"
+target_image_path = "../assets/characters/DIANA/DIANA_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] DIANA source face close-up, visually eighteen or nineteen; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; young Florentine woman; clear-faced, alert, self-possessed, modest citizen dress, youthful and firm. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-DIANA-STAND"
+target_image_path = "../assets/characters/DIANA/DIANA_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/DIANA/DIANA_face_3x4.png", "../assets/costumes/DIANA_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] DIANA front-and-back full-body character turnaround, visually eighteen or nineteen; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; young Florentine woman; clear-faced, alert, self-possessed, modest citizen dress, youthful and firm. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "CH-MARIANA-FACE"
+target_image_path = "../assets/characters/MARIANA/MARIANA_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] MARIANA source face close-up, visually in her twenties; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; young Florentine woman; cautious and sensitive, citizen clothing, expression of worried observation. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-MARIANA-STAND"
+target_image_path = "../assets/characters/MARIANA/MARIANA_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/MARIANA/MARIANA_face_3x4.png", "../assets/costumes/MARIANA_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] MARIANA front-and-back full-body character turnaround, visually in her twenties; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; young Florentine woman; cautious and sensitive, citizen clothing, expression of worried observation. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "STILL-ACT03-01"
+target_image_path = "../assets/act-03/concept-stills/AWTEW-ACT3-SG01_Florence_Receives_the_French.png" # todo
+reference_image_paths = ["../assets/environments/ENV-03_Florence.png", "../assets/characters/First-Lord/First-Lord_stand_1x1.png", "../assets/characters/Second-Lord/Second-Lord_stand_1x1.png", "../assets/characters/DUKE/DUKE_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Florence, DUKE's palace.. Characters present: DUKE, First Lord, Second Lord, soldiers. The image shows: The DUKE explains the war and welcomes the French lords into Florentine service. The conflict becomes BERTRAM's new field of ambition. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT03-02"
+target_image_path = "../assets/act-03/concept-stills/AWTEW-ACT3-SG02_Bertram_s_Impossible_Letter.png" # todo
+reference_image_paths = ["../assets/environments/ENV-01_Rousillon.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/COUNTESS/COUNTESS_stand_1x1.png", "../assets/characters/Clown/Clown_stand_1x1.png", "../assets/props/rings_bertram_king_helena.png", "../assets/props/letters_petitions.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Rousillon, COUNT's palace.. Characters present: COUNTESS, Clown, HELENA. The image shows: Letters reveal BERTRAM's rejection of HELENA. He declares he will not be her husband until she gets his ring and bears his child, conditions meant to be impossible. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT03-03"
+target_image_path = "../assets/act-03/concept-stills/AWTEW-ACT3-SG03_Helena_Chooses_Exile.png" # todo
+reference_image_paths = ["../assets/environments/ENV-01_Rousillon.png", "../assets/characters/HELENA/HELENA_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Rousillon, COUNT's palace, private chamber.. Characters present: HELENA. The image shows: HELENA blames herself for driving BERTRAM into danger and decides to leave Rousillon as a pilgrim, hoping her absence will draw him safely home. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT03-04"
+target_image_path = "../assets/act-03/concept-stills/AWTEW-ACT3-SG04_Bertram_Promoted_in_Florence.png" # todo
+reference_image_paths = ["../assets/environments/ENV-03_Florence.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/PAROLLES/PAROLLES_stand_1x1.png", "../assets/characters/DUKE/DUKE_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Florence, before the DUKE's palace.. Characters present: DUKE, BERTRAM, PAROLLES, soldiers. The image shows: The DUKE honours BERTRAM for military promise and places trust in him. BERTRAM gains the martial status he sought by fleeing marriage. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT03-05"
+target_image_path = "../assets/act-03/concept-stills/AWTEW-ACT3-SG05_The_Countess_Reads_Helena_s_Farewell.png" # todo
+reference_image_paths = ["../assets/environments/ENV-01_Rousillon.png", "../assets/characters/COUNTESS/COUNTESS_stand_1x1.png", "../assets/characters/Steward/Steward_stand_1x1.png", "../assets/props/letters_petitions.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Rousillon, COUNT's palace.. Characters present: COUNTESS, Steward. The image shows: COUNTESS reads HELENA's farewell letter and realizes the young wife has left in grief. She condemns BERTRAM's cruelty and sends after HELENA too late. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT03-06"
+target_image_path = "../assets/act-03/concept-stills/AWTEW-ACT3-SG06_Florence_Watches_the_Soldiers.png" # todo
+reference_image_paths = ["../assets/environments/ENV-03_Florence.png", "../assets/characters/Widow/Widow_stand_1x1.png", "../assets/characters/DIANA/DIANA_stand_1x1.png", "../assets/characters/MARIANA/MARIANA_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Florence, outside the walls.. Characters present: Widow, DIANA, MARIANA, citizens, soldiers passing. The image shows: Florentine women gather to watch the returning troops. They discuss BERTRAM's reputation and his pursuit of DIANA, establishing the local danger around him. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT03-07"
+target_image_path = "../assets/act-03/concept-stills/AWTEW-ACT3-SG07_Helena_Finds_Diana.png" # todo
+reference_image_paths = ["../assets/environments/ENV-03_Florence.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/Widow/Widow_stand_1x1.png", "../assets/characters/DIANA/DIANA_stand_1x1.png", "../assets/characters/MARIANA/MARIANA_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Florence, outside the walls, pilgrim route.. Characters present: HELENA, Widow, DIANA, MARIANA. The image shows: HELENA arrives disguised as a pilgrim and hears that BERTRAM has been courting DIANA. She recognizes a chance to turn his desire into a way to fulfill his impossible conditions. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT03-08"
+target_image_path = "../assets/act-03/concept-stills/AWTEW-ACT3-SG08_The_Drum_Trap_Proposed.png" # todo
+reference_image_paths = ["../assets/environments/ENV-04_Camp_before_Florence.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/First-Lord/First-Lord_stand_1x1.png", "../assets/characters/Second-Lord/Second-Lord_stand_1x1.png", "../assets/props/florentine_war_drum.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Camp before Florence.. Characters present: BERTRAM, First Lord, Second Lord. The image shows: The French lords persuade BERTRAM to test PAROLLES by sending him to recover a lost drum. They plan to expose the braggart's cowardice through a staged ambush. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT03-09"
+target_image_path = "../assets/act-03/concept-stills/AWTEW-ACT3-SG09_Bertram_Boasts_of_Diana.png" # todo
+reference_image_paths = ["../assets/environments/ENV-04_Camp_before_Florence.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/First-Lord/First-Lord_stand_1x1.png", "../assets/characters/Second-Lord/Second-Lord_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Camp before Florence.. Characters present: BERTRAM, First Lord, Second Lord. The image shows: BERTRAM speaks of his pursuit of DIANA and his hopes of winning her. The lords see both his vanity and PAROLLES's fraud moving toward exposure. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT03-10"
+target_image_path = "../assets/act-03/concept-stills/AWTEW-ACT3-SG10_Helena_Arranges_the_Bed_Trick.png" # todo
+reference_image_paths = ["../assets/environments/ENV-03_Florence.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/Widow/Widow_stand_1x1.png", "../assets/props/rings_bertram_king_helena.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Florence, Widow's house.. Characters present: HELENA, Widow. The image shows: HELENA reveals who she is and offers the Widow reward and honour if DIANA will help. They plan that DIANA will demand BERTRAM's ring, then HELENA will take DIANA's place in the dark. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+

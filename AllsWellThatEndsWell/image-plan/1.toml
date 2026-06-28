@@ -1,0 +1,384 @@
+# image2 execution rule: This plan is for image2 image generation. For every generation, pass only the prompt, reference images, aspect ratio, and parameters from the current individual [[tasks]] block. Do not use neighboring tasks, context, existing images, or character impressions to modify, complete, cross-reference, or reuse faces from other tasks.
+# Source: ../shot-groups/
+# Project: All's Well That Ends Well
+
+# Act 1 image generation plan. Within this act, execute in this order: environments first, tools/props/clothes second, characters third, concept stills last.
+
+[[tasks]]
+id = "ENV-01"
+target_image_path = "../assets/environments/ENV-01_Rousillon.png" # todo
+reference_image_paths = []
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Rousillon environment reference for Shakespeare's All's Well That Ends Well: a cinematic European Renaissance historical stage space with readable architecture, entrances, character staging zones, walls, colonnade or structural rhythm, window light, furniture, and walking paths. The frame is an empty location or contains only distant background figures.
+[Requirements] 16:9 horizontal environment asset. Keep the period consistent with French and Florentine Renaissance court and town settings. The space must be usable for later character concept stills, with a wide composition and clear movement paths."""
+
+[[tasks]]
+id = "ENV-02"
+target_image_path = "../assets/environments/ENV-02_Paris.png" # todo
+reference_image_paths = []
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Paris environment reference for Shakespeare's All's Well That Ends Well: a cinematic European Renaissance historical stage space with readable architecture, entrances, character staging zones, walls, colonnade or structural rhythm, window light, furniture, and walking paths. The frame is an empty location or contains only distant background figures.
+[Requirements] 16:9 horizontal environment asset. Keep the period consistent with French and Florentine Renaissance court and town settings. The space must be usable for later character concept stills, with a wide composition and clear movement paths."""
+
+[[tasks]]
+id = "COSTUME-HELENA"
+target_image_path = "../assets/costumes/HELENA_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for HELENA: modest young French noblewoman clothing with restrained physician-attendant practicality: layered gown, fitted bodice, simple sleeves, traveling cloak option, muted fabric palette, no royal excess. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "COSTUME-BERTRAM"
+target_image_path = "../assets/costumes/BERTRAM_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for BERTRAM: young French count wardrobe: black mourning suit, court doublet, noble cloak, leather boots, and campaign-ready military outer layer, all Renaissance period appropriate. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "COSTUME-COUNTESS"
+target_image_path = "../assets/costumes/COUNTESS_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for COUNTESS: French noble widow wardrobe: layered dark gown, structured bodice, veil or head covering, dignified sleeves, restrained jewelry, mourning palette. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "COSTUME-LAFEU"
+target_image_path = "../assets/costumes/LAFEU_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for LAFEU: elderly French courtier wardrobe: long court robe, noble outer coat, embroidered trim, soft hat or cap option, formal shoes, dignified but practical layers. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "COSTUME-PAROLLES"
+target_image_path = "../assets/costumes/PAROLLES_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for PAROLLES: overdecorated braggart soldier wardrobe: bright doublet, slashed sleeves, feathered cap, decorative sash, showy military ornaments, polished boots, deliberately theatrical silhouette. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "COSTUME-KING"
+target_image_path = "../assets/costumes/KING_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for KING: sick French king wardrobe: royal robe, fur or velvet trim, restrained crown ornament, ceremonial collar, heavy fabric that suggests power despite illness. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "COSTUME-First-Lord"
+target_image_path = "../assets/costumes/First-Lord_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for First Lord: French noble officer wardrobe: court doublet combined with campaign cloak, leather belt, sword belt, riding boots, restrained noble trim. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "COSTUME-Second-Lord"
+target_image_path = "../assets/costumes/Second-Lord_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for Second Lord: French noble officer wardrobe with sharper military tone: campaign coat, noble cloak, leather gloves, sword belt, riding boots, darker practical palette. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "COSTUME-Clown"
+target_image_path = "../assets/costumes/Clown_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for Clown: Rousillon household clown wardrobe: servant tunic mixed with fool details, patched or color-blocked fabric, soft cap, practical shoes, comic but period-plausible. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "COSTUME-Steward"
+target_image_path = "../assets/costumes/Steward_costume_reference.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Costume and clothing reference for Steward: Rousillon estate steward wardrobe: tidy servant doublet, keys or ledger pouch, plain cloak, practical shoes, sober household colors. Present the wardrobe as a clean period costume asset with front-facing garment structure, fabric layers, shoes, belts, sleeves, collars, and major accessories readable. Use a neutral display pose or mannequin-like presentation without defining the character's face.
+[Requirements] Costume reference only, created before character identity assets. Focus on clothing structure, fabric, silhouette, and Renaissance period materials. This image is used later for the character standee's wardrobe continuity, not as a face reference."""
+
+[[tasks]]
+id = "CH-HELENA-FACE"
+target_image_path = "../assets/characters/HELENA/HELENA_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] HELENA source face close-up, visually in her early twenties; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; daughter of Gerard de Narbon; intelligent, determined, medically trained, clear eyes, restrained expression with inner resilience, modest French noble attendant and young physician clothing. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-HELENA-STAND"
+target_image_path = "../assets/characters/HELENA/HELENA_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/HELENA/HELENA_face_3x4.png", "../assets/costumes/HELENA_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] HELENA front-and-back full-body character turnaround, visually in her early twenties; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; daughter of Gerard de Narbon; intelligent, determined, medically trained, clear eyes, restrained expression with inner resilience, modest French noble attendant and young physician clothing. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "CH-BERTRAM-FACE"
+target_image_path = "../assets/characters/BERTRAM/BERTRAM_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] BERTRAM source face close-up, visually in his early twenties; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; young Count of Rousillon; handsome and proud, lean face, clean jawline, noble heir bearing, moving from black mourning clothes into court and military dress. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-BERTRAM-STAND"
+target_image_path = "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/BERTRAM/BERTRAM_face_3x4.png", "../assets/costumes/BERTRAM_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] BERTRAM front-and-back full-body character turnaround, visually in his early twenties; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; young Count of Rousillon; handsome and proud, lean face, clean jawline, noble heir bearing, moving from black mourning clothes into court and military dress. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "CH-COUNTESS-FACE"
+target_image_path = "../assets/characters/COUNTESS/COUNTESS_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] COUNTESS source face close-up, visually in her fifties; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; Countess of Rousillon; dignified and maternal, calm eyes with grief and compassion, French noble widow, layered dark gown and widow dress. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-COUNTESS-STAND"
+target_image_path = "../assets/characters/COUNTESS/COUNTESS_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/COUNTESS/COUNTESS_face_3x4.png", "../assets/costumes/COUNTESS_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] COUNTESS front-and-back full-body character turnaround, visually in her fifties; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; Countess of Rousillon; dignified and maternal, calm eyes with grief and compassion, French noble widow, layered dark gown and widow dress. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "CH-LAFEU-FACE"
+target_image_path = "../assets/characters/LAFEU/LAFEU_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] LAFEU source face close-up, visually around sixty; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; elderly French nobleman and courtier; witty and blunt, silver-gray beard, sharp yet kindly eyes, court robe and noble outer coat. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-LAFEU-STAND"
+target_image_path = "../assets/characters/LAFEU/LAFEU_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/LAFEU/LAFEU_face_3x4.png", "../assets/costumes/LAFEU_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] LAFEU front-and-back full-body character turnaround, visually around sixty; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; elderly French nobleman and courtier; witty and blunt, silver-gray beard, sharp yet kindly eyes, court robe and noble outer coat. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "CH-PAROLLES-FACE"
+target_image_path = "../assets/characters/PAROLLES/PAROLLES_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] PAROLLES source face close-up, visually around thirty; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; boastful military hanger-on; long narrow face, theatrical eyes, carefully trimmed beard, bright overdecorated clothing with feathers and military ornaments. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-PAROLLES-STAND"
+target_image_path = "../assets/characters/PAROLLES/PAROLLES_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/PAROLLES/PAROLLES_face_3x4.png", "../assets/costumes/PAROLLES_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] PAROLLES front-and-back full-body character turnaround, visually around thirty; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; boastful military hanger-on; long narrow face, theatrical eyes, carefully trimmed beard, bright overdecorated clothing with feathers and military ornaments. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "CH-KING-FACE"
+target_image_path = "../assets/characters/KING/KING_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] KING source face close-up, visually over sixty; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; King of France; sick but still commanding, gaunt face, pronounced brow, tired clear eyes, royal robe and restrained crown ornament. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-KING-STAND"
+target_image_path = "../assets/characters/KING/KING_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/KING/KING_face_3x4.png", "../assets/costumes/KING_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] KING front-and-back full-body character turnaround, visually over sixty; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; King of France; sick but still commanding, gaunt face, pronounced brow, tired clear eyes, royal robe and restrained crown ornament. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "CH-First-Lord-FACE"
+target_image_path = "../assets/characters/First-Lord/First-Lord_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] First Lord source face close-up, visually in his thirties; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; French noble officer; steady and capable, short beard, mixed knightly and court clothing. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-First-Lord-STAND"
+target_image_path = "../assets/characters/First-Lord/First-Lord_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/First-Lord/First-Lord_face_3x4.png", "../assets/costumes/First-Lord_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] First Lord front-and-back full-body character turnaround, visually in his thirties; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; French noble officer; steady and capable, short beard, mixed knightly and court clothing. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "CH-Second-Lord-FACE"
+target_image_path = "../assets/characters/Second-Lord/Second-Lord_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Second Lord source face close-up, visually in his thirties; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; French noble officer; sharp and ironic, leaner face, campaign coat with noble cloak. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-Second-Lord-STAND"
+target_image_path = "../assets/characters/Second-Lord/Second-Lord_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/Second-Lord/Second-Lord_face_3x4.png", "../assets/costumes/Second-Lord_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] Second Lord front-and-back full-body character turnaround, visually in his thirties; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; French noble officer; sharp and ironic, leaner face, campaign coat with noble cloak. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "CH-Clown-FACE"
+target_image_path = "../assets/characters/Clown/Clown_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Clown source face close-up, visually around forty; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; Lavatch, clown of the Rousillon household; quick comic expression, servant and fool clothing mixed together, nimble posture. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-Clown-STAND"
+target_image_path = "../assets/characters/Clown/Clown_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/Clown/Clown_face_3x4.png", "../assets/costumes/Clown_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] Clown front-and-back full-body character turnaround, visually around forty; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; Lavatch, clown of the Rousillon household; quick comic expression, servant and fool clothing mixed together, nimble posture. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "CH-Steward-FACE"
+target_image_path = "../assets/characters/Steward/Steward_face_3x4.png" # todo
+reference_image_paths = []
+aspect_ratio = "3:4"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 3:4
+[Subject] Steward source face close-up, visually around fifty; front-facing close identity portrait, framed from the top of the head to just below the collarbone, soft low-detail Renaissance European court or town background, face clear and prominent; Rousillon steward; cautious and loyal, plain tidy estate steward clothing. Keep only a small amount of shoulder and identity-appropriate collar or upper garment texture. This image defines the identity anchor for the same face in later assets.
+[Requirements] Single-person front-facing close identity portrait. Prioritize face shape, head shape, hair, facial features, neck, and a small shoulder outline. Crop to just below the collarbone, keep the background softly blurred, and make facial detail clear. The character must match the role and age implied by Shakespeare's play."""
+
+[[tasks]]
+id = "CH-Steward-STAND"
+target_image_path = "../assets/characters/Steward/Steward_stand_1x1.png" # todo
+reference_image_paths = ["../assets/characters/Steward/Steward_face_3x4.png", "../assets/costumes/Steward_costume_reference.png"]
+aspect_ratio = "1:1"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 1:1
+[Subject] Steward front-and-back full-body character turnaround, visually around fifty; front view and back view side by side, 1:1 square image, pure white background, full body complete without cropping, both figures at the same scale; Rousillon steward; cautious and loyal, plain tidy estate steward clothing. Shoes, belt, outer garment, sleeves, fabric layers, and back-view folds are clear. This is a character costume reference asset for later concept stills and video generation.
+[Requirements] Show only the explicitly described subject, clothing, proportions, and front/back relationship. Keep composition clean, historical materials readable, identity stable, and image boundaries controlled. Image 1 is used for character identity and same-face continuity. Image 2 is used for clothing structure, fabric, silhouette, and costume continuity."""
+
+[[tasks]]
+id = "STILL-ACT01-01"
+target_image_path = "../assets/act-01/concept-stills/AWTEW-ACT1-SG01_Mourning_at_Rousillon.png" # todo
+reference_image_paths = ["../assets/environments/ENV-01_Rousillon.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/COUNTESS/COUNTESS_stand_1x1.png", "../assets/characters/LAFEU/LAFEU_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Rousillon, COUNT's palace, mourning chamber.. Characters present: COUNTESS, BERTRAM, HELENA, LAFEU. The image shows: The household stands in black after the Count's death. COUNTESS grieves losing her son to the King's wardship; BERTRAM prepares to leave, and LAFEU speaks of the sick King of France. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT01-02"
+target_image_path = "../assets/act-01/concept-stills/AWTEW-ACT1-SG02_Gerard_de_Narbon_s_Cure_Remembered.png" # todo
+reference_image_paths = ["../assets/environments/ENV-01_Rousillon.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/COUNTESS/COUNTESS_stand_1x1.png", "../assets/characters/LAFEU/LAFEU_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Rousillon, COUNT's palace, same mourning chamber.. Characters present: COUNTESS, LAFEU, BERTRAM, HELENA. The image shows: COUNTESS and LAFEU remember HELENA's father Gerard de Narbon, whose medical skill might have cured the King's fistula. HELENA remains quiet, absorbing the possibility. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT01-03"
+target_image_path = "../assets/act-01/concept-stills/AWTEW-ACT1-SG03_Bertram_Leaves_for_Court.png" # todo
+reference_image_paths = ["../assets/environments/ENV-01_Rousillon.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/COUNTESS/COUNTESS_stand_1x1.png", "../assets/characters/LAFEU/LAFEU_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Rousillon, COUNT's palace exit.. Characters present: BERTRAM, COUNTESS, LAFEU, HELENA. The image shows: BERTRAM takes formal leave for the French court. COUNTESS blesses him; HELENA watches the man she loves depart beyond her reach. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT01-04"
+target_image_path = "../assets/act-01/concept-stills/AWTEW-ACT1-SG04_Helena_s_Hidden_Love.png" # todo
+reference_image_paths = ["../assets/environments/ENV-01_Rousillon.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/PAROLLES/PAROLLES_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Rousillon, COUNT's palace, after the others exit.. Characters present: HELENA, PAROLLES. The image shows: HELENA confesses in soliloquy that she loves BERTRAM despite the gulf in rank. PAROLLES enters with bawdy talk of virginity, turning her private longing into a sharper resolve. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT01-05"
+target_image_path = "../assets/act-01/concept-stills/AWTEW-ACT1-SG05_Helena_Forms_the_Paris_Plan.png" # todo
+reference_image_paths = ["../assets/environments/ENV-01_Rousillon.png", "../assets/characters/HELENA/HELENA_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Rousillon, COUNT's palace, quiet interior.. Characters present: HELENA. The image shows: After PAROLLES exits, HELENA decides to go to Paris and attempt the King's cure with her father's remedies, hoping that medicine may open a path toward BERTRAM. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT01-06"
+target_image_path = "../assets/act-01/concept-stills/AWTEW-ACT1-SG06_The_War_Question_in_Paris.png" # todo
+reference_image_paths = ["../assets/environments/ENV-02_Paris.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/KING/KING_stand_1x1.png", "../assets/characters/First-Lord/First-Lord_stand_1x1.png", "../assets/characters/Second-Lord/Second-Lord_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Paris, KING's palace.. Characters present: KING, First Lord, Second Lord, BERTRAM, attendants. The image shows: The sick KING receives news of the Florentine and Senoy war. He refuses direct French intervention but allows young nobles to seek honour in Italy on their own. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT01-07"
+target_image_path = "../assets/act-01/concept-stills/AWTEW-ACT1-SG07_Bertram_Presented_to_the_King.png" # todo
+reference_image_paths = ["../assets/environments/ENV-02_Paris.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/KING/KING_stand_1x1.png", "../assets/characters/First-Lord/First-Lord_stand_1x1.png", "../assets/characters/Second-Lord/Second-Lord_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Paris, KING's palace.. Characters present: KING, BERTRAM, First Lord, Second Lord. The image shows: BERTRAM is presented as the late Count's son and ward. The KING remembers BERTRAM's father warmly and urges the young man to inherit his father's virtues. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT01-08"
+target_image_path = "../assets/act-01/concept-stills/AWTEW-ACT1-SG08_A_Household_Rumour_About_Helena.png" # todo
+reference_image_paths = ["../assets/environments/ENV-01_Rousillon.png", "../assets/characters/COUNTESS/COUNTESS_stand_1x1.png", "../assets/characters/Clown/Clown_stand_1x1.png", "../assets/characters/Steward/Steward_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Rousillon, COUNT's palace.. Characters present: COUNTESS, Steward, Clown. The image shows: The Steward tells COUNTESS that he overheard HELENA confessing love for BERTRAM. The Clown's comedy delays the matter, but COUNTESS recognizes the seriousness beneath the report. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT01-09"
+target_image_path = "../assets/act-01/concept-stills/AWTEW-ACT1-SG09_Countess_Confronts_Helena.png" # todo
+reference_image_paths = ["../assets/environments/ENV-01_Rousillon.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/COUNTESS/COUNTESS_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Rousillon, COUNT's palace, private room.. Characters present: COUNTESS, HELENA. The image shows: COUNTESS tests HELENA by calling herself her mother. HELENA breaks down, confesses that she loves BERTRAM, and fears the confession makes her unworthy. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT01-10"
+target_image_path = "../assets/act-01/concept-stills/AWTEW-ACT1-SG10_Blessing_for_the_Cure.png" # todo
+reference_image_paths = ["../assets/environments/ENV-01_Rousillon.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/COUNTESS/COUNTESS_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Rousillon, COUNT's palace, private room.. Characters present: COUNTESS, HELENA. The image shows: HELENA reveals her plan to heal the KING using her father's medicine. COUNTESS, moved by her courage and love, gives HELENA money, blessing, and permission to travel to Paris. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+

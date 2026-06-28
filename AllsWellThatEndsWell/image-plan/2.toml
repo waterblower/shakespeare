@@ -1,0 +1,105 @@
+# image2 execution rule: This plan is for image2 image generation. For every generation, pass only the prompt, reference images, aspect ratio, and parameters from the current individual [[tasks]] block. Do not use neighboring tasks, context, existing images, or character impressions to modify, complete, cross-reference, or reuse faces from other tasks.
+# Source: ../shot-groups/
+# Project: All's Well That Ends Well
+
+# Act 2 image generation plan. Within this act, execute in this order: environments first, tools/props/clothes second, characters third, concept stills last.
+
+[[tasks]]
+id = "PROP-RINGS"
+target_image_path = "../assets/props/rings_bertram_king_helena.png" # todo
+reference_image_paths = []
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Two Renaissance rings laid on dark velvet: one noble family ring connected to Bertram and one royal ring connected to Helena and the King; close prop reference, metal engraving and gemstone settings clear.
+[Requirements] Single tool or prop reference image with the object centered. Material, scale, structure, and period craftsmanship must be clearly readable for use as a later story concept-still reference asset."""
+
+[[tasks]]
+id = "STILL-ACT02-01"
+target_image_path = "../assets/act-02/concept-stills/AWTEW-ACT2-SG01_Young_Lords_Depart_for_War.png" # todo
+reference_image_paths = ["../assets/environments/ENV-02_Paris.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/PAROLLES/PAROLLES_stand_1x1.png", "../assets/characters/KING/KING_stand_1x1.png", "../assets/characters/First-Lord/First-Lord_stand_1x1.png", "../assets/characters/Second-Lord/Second-Lord_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Paris, KING's palace.. Characters present: KING, First Lord, Second Lord, BERTRAM, PAROLLES, attendants. The image shows: The KING sends young French lords toward the Florentine war with solemn advice. BERTRAM longs to go with them but remains restrained by the King's command. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT02-02"
+target_image_path = "../assets/act-02/concept-stills/AWTEW-ACT2-SG02_Helena_Offers_the_Cure.png" # todo
+reference_image_paths = ["../assets/environments/ENV-02_Paris.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/LAFEU/LAFEU_stand_1x1.png", "../assets/characters/KING/KING_stand_1x1.png", "../assets/props/rings_bertram_king_helena.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Paris, KING's palace, sickroom or audience chamber.. Characters present: KING, HELENA, LAFEU, attendants. The image shows: LAFEU brings HELENA before the sick KING. The KING doubts her youth and her remedy, but HELENA insists her father's art and heaven's help can cure him. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT02-03"
+target_image_path = "../assets/act-02/concept-stills/AWTEW-ACT2-SG03_The_King_s_Wager.png" # todo
+reference_image_paths = ["../assets/environments/ENV-02_Paris.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/LAFEU/LAFEU_stand_1x1.png", "../assets/characters/KING/KING_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Paris, KING's palace.. Characters present: KING, HELENA, LAFEU. The image shows: HELENA stakes her life on the cure and asks that, if she succeeds, she may choose a husband from the court. The KING accepts the bargain. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT02-04"
+target_image_path = "../assets/act-02/concept-stills/AWTEW-ACT2-SG04_The_Clown_Sent_to_Court.png" # todo
+reference_image_paths = ["../assets/environments/ENV-01_Rousillon.png", "../assets/characters/COUNTESS/COUNTESS_stand_1x1.png", "../assets/characters/Clown/Clown_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Rousillon, COUNT's palace.. Characters present: COUNTESS, Clown. The image shows: COUNTESS sends the Clown to court with messages. His riddling, earthy jokes turn the household errand into comic relief before the story returns to Paris. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT02-05"
+target_image_path = "../assets/act-02/concept-stills/AWTEW-ACT2-SG05_The_King_s_Recovery_Announced.png" # todo
+reference_image_paths = ["../assets/environments/ENV-02_Paris.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/LAFEU/LAFEU_stand_1x1.png", "../assets/characters/PAROLLES/PAROLLES_stand_1x1.png", "../assets/characters/KING/KING_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Paris, KING's palace.. Characters present: KING, HELENA, LAFEU, PAROLLES, BERTRAM, court lords. The image shows: The court gathers after HELENA's cure succeeds. LAFEU marvels at the miracle while PAROLLES postures and BERTRAM stands among the eligible young lords. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT02-06"
+target_image_path = "../assets/act-02/concept-stills/AWTEW-ACT2-SG06_Helena_Chooses_Bertram.png" # todo
+reference_image_paths = ["../assets/environments/ENV-02_Paris.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/LAFEU/LAFEU_stand_1x1.png", "../assets/characters/KING/KING_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Paris, KING's palace, formal court.. Characters present: HELENA, BERTRAM, KING, LAFEU, court lords. The image shows: HELENA passes over other nobles and chooses BERTRAM as her husband. BERTRAM recoils at her lower birth and refuses the match in front of the court. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT02-07"
+target_image_path = "../assets/act-02/concept-stills/AWTEW-ACT2-SG07_The_Forced_Marriage.png" # todo
+reference_image_paths = ["../assets/environments/ENV-02_Paris.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/LAFEU/LAFEU_stand_1x1.png", "../assets/characters/PAROLLES/PAROLLES_stand_1x1.png", "../assets/characters/KING/KING_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Paris, KING's palace, formal court.. Characters present: KING, BERTRAM, HELENA, LAFEU, PAROLLES, attendants. The image shows: The KING rebukes BERTRAM's pride and commands him to marry HELENA. BERTRAM submits outwardly, while LAFEU sees through PAROLLES's swagger and the court prepares the wedding. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT02-08"
+target_image_path = "../assets/act-02/concept-stills/AWTEW-ACT2-SG08_Bertram_s_Flight_Decided.png" # todo
+reference_image_paths = ["../assets/environments/ENV-02_Paris.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/PAROLLES/PAROLLES_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Paris, KING's palace, after the ceremony.. Characters present: BERTRAM, PAROLLES. The image shows: BERTRAM refuses to consummate the marriage and plans to run to the Florentine war. PAROLLES encourages the escape, framing military adventure as preferable to domestic obedience. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT02-09"
+target_image_path = "../assets/act-02/concept-stills/AWTEW-ACT2-SG09_Helena_Learns_Bertram_Is_Leaving.png" # todo
+reference_image_paths = ["../assets/environments/ENV-02_Paris.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/PAROLLES/PAROLLES_stand_1x1.png", "../assets/characters/Clown/Clown_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Paris, KING's palace.. Characters present: HELENA, Clown, PAROLLES. The image shows: HELENA receives news from the Clown and PAROLLES that BERTRAM intends to depart that night. Her wedding joy is immediately replaced by uncertainty and humiliation. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
+[[tasks]]
+id = "STILL-ACT02-10"
+target_image_path = "../assets/act-02/concept-stills/AWTEW-ACT2-SG10_A_Cold_Farewell.png" # todo
+reference_image_paths = ["../assets/environments/ENV-02_Paris.png", "../assets/characters/HELENA/HELENA_stand_1x1.png", "../assets/characters/BERTRAM/BERTRAM_stand_1x1.png", "../assets/characters/LAFEU/LAFEU_stand_1x1.png", "../assets/characters/PAROLLES/PAROLLES_stand_1x1.png"]
+aspect_ratio = "16:9"
+prompt = """[Base cinematography] ARRI ALEXA 35, Open Gate 4.6K, Cooke Anamorphic/i 40mm, T2.8, 16:9
+[Subject] Story concept still for Shakespeare's All's Well That Ends Well. Location: Paris, KING's palace.. Characters present: BERTRAM, HELENA, LAFEU, PAROLLES. The image shows: LAFEU warns BERTRAM against trusting PAROLLES. BERTRAM gives HELENA a brief, cold farewell, sends her back to Rousillon, and leaves for Florence instead of joining her as husband. Character relationships, action direction, expressions, and spatial positions are clear. Costumes have a European Renaissance historical texture.
+[Requirements] 16:9 horizontal cinematic still composition. Show only the main characters and story action named in this task. Image 1 is used for location and spatial reference. Later character reference images are used for identity, face continuity, and costume layers. Any prop reference image is used for the matching prop's material and shape."""
+
